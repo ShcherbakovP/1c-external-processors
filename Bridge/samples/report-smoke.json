@@ -1,0 +1,11 @@
+{
+  "name": "report-smoke",
+  "type": "report",
+  "title": "Дымовой evidence моста — отчёт СКД (конфиг-независимая схема)",
+  "dcs": "report-smoke.dcs",
+  "expect": {
+    "min_rows": 1,
+    "columns": ["Код", "Имя"],
+    "forbid_text": ["Ошибка"]
+  }
+}

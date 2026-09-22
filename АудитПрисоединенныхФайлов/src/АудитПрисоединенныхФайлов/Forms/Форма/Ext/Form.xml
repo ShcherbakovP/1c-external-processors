@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoTitle>true</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>true</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<GroupBox name="ГруппаНастройки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ChildItems>
+				<InputField name="ПолеПутьКCSV" id="11">
+					<DataPath>ПутьКCSV</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь к CSV-файлу (на сервере)</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+				</InputField>
+				<CheckBox name="ФлагТолькоНеСуществующие" id="12">
+					<DataPath>ТолькоНеСуществующие</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Только потерянные файлы в CSV</v8:content>
+						</v8:item>
+					</Title>
+				</CheckBox>
+			</ChildItems>
+		</GroupBox>
+		<GroupBox name="ГруппаКнопок" id="20">
+			<Group>Horizontal</Group>
+			<ChildItems>
+				<Button name="КнопкаВыполнитьАудит" id="21">
+					<CommandName>Form.Command.ВыполнитьАудит</CommandName>
+					<DefaultButton>true</DefaultButton>
+					<Representation>PictureAndText</Representation>
+				</Button>
+				<Button name="КнопкаОткрытьCSV" id="22">
+					<CommandName>Form.Command.ОткрытьCSV</CommandName>
+					<Representation>PictureAndText</Representation>
+				</Button>
+			</ChildItems>
+		</GroupBox>
+		<SpreadsheetDocumentField name="ПолеРезультат" id="30">
+			<DataPath>Результат</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат аудита</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Output>Auto</Output>
+			<Edit>Forbid</Edit>
+		</SpreadsheetDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.АудитПрисоединенныхФайлов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Результат" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоНеСуществующие" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только несуществующие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://www.w3.org/2001/XMLSchema">d5p1:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКCSV" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к CSV</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://www.w3.org/2001/XMLSchema">d5p1:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьАудит" id="100">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить аудит</v8:content>
+				</v8:item>
+			</Title>
+			<Use>
+				<common>true</common>
+			</Use>
+			<Action>ВыполнитьАудит</Action>
+		</Command>
+		<Command name="ОткрытьCSV" id="101">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть CSV</v8:content>
+				</v8:item>
+			</Title>
+			<Use>
+				<common>true</common>
+			</Use>
+			<Action>ОткрытьCSV</Action>
+		</Command>
+	</Commands>
+</Form>

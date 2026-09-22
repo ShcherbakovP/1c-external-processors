@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e999c7fd-3532-49d1-b931-478cdaccae76">
+  <producedTypes>
+    <objectType typeId="81b9bbc5-f055-4f7f-b27e-6fbc8adc34bf" valueTypeId="a53e9e32-9dd9-401e-907f-619a18243c00"/>
+  </producedTypes>
+  <name>Bridge</name>
+  <synonym>
+    <key>ru</key>
+    <value>Bridge evidence</value>
+  </synonym>
+  <defaultForm>ExternalDataProcessor.Bridge.Form.Форма</defaultForm>
+  <forms uuid="e5d8deb8-d534-42f6-b7fc-b657b1e0d644">
+    <name>Форма</name>
+  </forms>
+</mdclass:ExternalDataProcessor>

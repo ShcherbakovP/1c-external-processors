@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ecdd71a4-515f-4ff3-9866-b2f82444f5de">
+  <producedTypes>
+    <objectType typeId="325841e2-6436-4086-bb68-490256fe3002" valueTypeId="fd193059-d218-42c3-8ffa-44b64f08b8af"/>
+  </producedTypes>
+  <name>IKassaПробник</name>
+  <synonym>
+    <key>ru</key>
+    <value>iKassa: пробник связи PAX A930</value>
+  </synonym>
+  <forms uuid="72f42899-70dc-4bbb-987e-8340121cda04">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пробник iKassa</value>
+    </synonym>
+  </forms>
+</mdclass:ExternalDataProcessor>
